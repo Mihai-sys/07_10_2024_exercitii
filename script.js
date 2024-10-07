@@ -17,7 +17,7 @@ console.log( computeSum(20, 15));
  */
 function isEven (checkedNumber) {
     let isOdd = true;
-    if (checkedNumber %2 === 0) {
+    if (checkedNumber %2 !== 0) {
         isOdd = false;
     }
     return !isOdd;
@@ -26,16 +26,29 @@ console.log(isEven (12));
 console.log(isEven(3));
 
 /**
- * Concatenarea Șirurilor:
+ * Concatenarea Șirurilor de caractere:
  * Creează o funcție numită concatenateStrings care primește 
  * două șiruri și le concatenează, returnând rezultatul.
  */
-
+function concatenatedStrings(string1, string2){
+    return string1 + string2;
+}
+const result = concatenatedStrings("Alabala", "Portocaala");
+console.log(result);
 /**
  * Verificarea Palindromului:
  * Defineste o funcție numită isPalindrome care primește un șir și
  *  returnează true dacă este palindrom și false în caz contrar.
  */
+function isPalindrome(text){
+    let reverseText = "";
+    for(const letter of text){
+        reverseText = letter + reverseText;
+    }
+    return text === reverseText;
+}
+console.log(isPalindrome("aba"));
+console.log(isPalindrome("abca"));
 
 /**
  * Generarea unui Număr Aleatoriu:
