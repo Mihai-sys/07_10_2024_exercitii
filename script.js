@@ -35,7 +35,7 @@ function concatenatedStrings(string1, string2){
 }
 const result = concatenatedStrings("Alabala", "Portocaala");
 console.log(result);
-/**
+/** 
  * Verificarea Palindromului:
  * Defineste o funcție numită isPalindrome care primește un șir și
  *  returnează true dacă este palindrom și false în caz contrar.
@@ -55,31 +55,64 @@ console.log(isPalindrome("abca"));
  * Scrie o funcție numită generateRandomNumber care 
  * returnează un număr aleatoriu întreg între 1 și 100.
  */
+function generateRandomNumber(){
+    let x = Math.floor((Math.random() * 100) + 1);
+    return Math.floor(Math.random() * 100);
+
+}
+console.log(generateRandomNumber());
+
 
 /**
  * Calcularea Puterii:
  * Implementează o funcție numită raiseToPower care primește 
  * două numere (baza și exponentul) și returnează rezultatul ridicării la putere.
  */
+function raiseToPower(a, b){
+    let rezultat = Math.pow(2, 3);
+    return Math.pow(2, 3);
+
+}
+console.log(raiseToPower());
 
 /**
  * Calcularea Mediei:
  * Creează o funcție numită calculateAverage care primește 
  * un array de numere și returnează media lor.
  */
-
+function calculateAverage(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    return sum / array.length;
+  }
+  console.log("average: ", calculateAverage([10, 7, 8, 4]));
 /**
  * Transformarea în Majusculă:
  * Definește o funcție numită transformToUppercase 
  * care primește un șir și returnează șirul cu toate 
  * literele transformate în majusculă.
  */
-
+function transformToUppercase(sir) {
+  return sir.toUpperCase();
+}
+console.log(transformToUppercase("AndreiseJoaca"));
 /**
  * Verificarea Numărului Prim:
  * Scrie o funcție numită isPrimeNumber care primește un număr 
  * și returnează true dacă este prim și false în caz contrar.
  */
 
-  
-
+function isPrime(number) {
+    if (number <= 1) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(isPrime(4))
